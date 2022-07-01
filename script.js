@@ -3,8 +3,6 @@
 const number1 = document.getElementById("number1")
 const number2 = document.getElementById("number2")
 
-const radio = document.getElementById("sum")
-
 
 number1.addEventListener('change', radiocheck)
 number2.addEventListener('change', radiocheck)
@@ -41,6 +39,8 @@ function radiocheck(){
         if(checkValue == "tasu"){
             let total = parseInt(number1.value) + parseInt(number2.value)
 
+            document.getElementById("enzansi").innerHTML = "+"
+
             if(!isNaN(total)){
                 document.getElementById("outPut").innerHTML = `計算結果は${total}です`
             }else{
@@ -49,6 +49,8 @@ function radiocheck(){
            
         }else if(checkValue == "hiku"){
             let total = parseInt(number1.value) - parseInt(number2.value)
+
+            document.getElementById("enzansi").innerHTML = "-"
 
             if(!isNaN(total)){
                 document.getElementById("outPut").innerHTML = `計算結果は${total}です`
@@ -59,6 +61,8 @@ function radiocheck(){
         }else if(checkValue == "kake"){
             let total = parseInt(number1.value) * parseInt(number2.value)
 
+            document.getElementById("enzansi").innerHTML = "✕"
+
             if(!isNaN(total)){
                 document.getElementById("outPut").innerHTML = `計算結果は${total}です`
             }else{
@@ -67,6 +71,8 @@ function radiocheck(){
     
         }else if(checkValue == "wari"){
             let total = parseInt(number1.value) / parseInt(number2.value)
+
+            document.getElementById("enzansi").innerHTML = "÷"
 
             if(!isNaN(total)){
                 document.getElementById("outPut").innerHTML = `数値の合計は${total}です`

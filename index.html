@@ -11,18 +11,25 @@
 
 <body>
     <main>
-        <div class="main-wrapper">
-            <h1>数値を入力してください</h1>
-            <div class="radio-button">
-                <input type="radio" name="calc" value="tasu" onclick="radiocheck()" checked>足し算
-                <input type="radio" name="calc" value="hiku" onclick="radiocheck()">引き算
-                <input type="radio" name="calc" value="kake" onclick="radiocheck()">掛け算
-                <input type="radio" name="calc" value="wari" onclick="radiocheck()">割り算
-            </div>
+        <div class="contents-wrapper">
+            <div class="contents">
+                <h1>数値を入力してください</h1>
+                <div class="radio-button">
+                    <input type="radio" name="calc" value="tasu" onclick="radiocheck()" checked>足し算
+                    <input type="radio" name="calc" value="hiku" onclick="radiocheck()">引き算
+                    <input type="radio" name="calc" value="kake" onclick="radiocheck()">掛け算
+                    <input type="radio" name="calc" value="wari" onclick="radiocheck()">割り算
+                </div>
 
-            <input type="text" id="number1"><span id="enzansi"></span><input type="text" id="number2">
-            <div>
-                <p id="outPut">ラジオボタンを押してください</p>
+                <input type="text" id="number1"><span id="enzansi">+</span><input type="text" id="number2">
+
+                <div>
+                    <p id="outPut">数値を入力してください</p>
+                </div>
+
+                <input type="button" value="計算結果を保存" id="btn">
+
+                <div id="addResult" class="container"></div>
             </div>
         </div>
     </main>

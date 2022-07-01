@@ -16,6 +16,24 @@ function result(op, total) {
     }else{
         document.getElementById("outPut").innerHTML = "数値を入力してください"
     }
+
+}
+
+
+function addResult(total){
+
+    let btn = document.getElementById("btn")
+    btn.addEventListener('click', aaa)
+
+    function aaa(){
+        const container = document.querySelector(".container")
+        const child1 = document.createElement("p")
+        container.appendChild(child1)
+
+        child1.appendChild(document.createTextNode(total))
+        console.log(total);
+    }
+
 }
 
 
@@ -30,25 +48,46 @@ function radiocheck(){
     }
 
         if(checkValue == "tasu"){
+
             let total = parseInt(number1.value) + parseInt(number2.value)
 
-            result('+', total)
+            if(!isNaN(total)){
+
+                result('+', total)
+                addResult(total)
+
+            }else{}
            
         }else if(checkValue == "hiku"){
             let total = parseInt(number1.value) - parseInt(number2.value)
 
-           result('-', total)
+           if(!isNaN(total)){
+
+                result('-', total)
+                addResult(total)
+
+            }else{}
             
         }else if(checkValue == "kake"){
             let total = parseInt(number1.value) * parseInt(number2.value)
 
-            result('✕', total)
+            if(!isNaN(total)){
+
+                result('✕', total)
+                addResult(total)
+
+            }else{}
     
         }else if(checkValue == "wari"){
             let total = parseInt(number1.value) / parseInt(number2.value)
 
-            result('÷', total)
+            if(!isNaN(total)){
 
+                result('÷', total)
+                addResult(total)
+
+            }else{}
+            
         }
 }
 

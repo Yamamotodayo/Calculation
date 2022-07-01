@@ -1,11 +1,29 @@
 @charset "UTF-8";
 
 body {
+    margin: 0;
+    padding: 0;
 }
 
-.main-wrapper {
+.contents-wrapper {
+    background: rgb(224, 233, 250);
+    margin: 0 auto;
+    height: auto;
+    width: 500px;
 }
+
+.contents{
+    text-align: center;
+}
+
 
 span {
     margin: 0 5px;
+}
+
+/* addResult */
+.container {
+    width: 100%;
+    height: auto;
+    background: rebeccapurple;
 }

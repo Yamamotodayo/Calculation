@@ -23,7 +23,16 @@ number2.addEventListener('change', radiocheck)
 //     }
 // }
 
+function result(op, total) {
+    document.getElementById("enzansi").innerHTML = op
 
+    if(!isNaN(total)){
+        document.getElementById("outPut").innerHTML = `計算結果は${total}です`
+    }else{
+        document.getElementById("outPut").innerHTML = "数値を入力してください"
+    }
+
+}
 
 function radiocheck(){
     let elements = document.getElementsByName("calc")
@@ -39,13 +48,15 @@ function radiocheck(){
         if(checkValue == "tasu"){
             let total = parseInt(number1.value) + parseInt(number2.value)
 
-            document.getElementById("enzansi").innerHTML = "+"
+            result('+', total)
 
-            if(!isNaN(total)){
-                document.getElementById("outPut").innerHTML = `計算結果は${total}です`
-            }else{
-                document.getElementById("outPut").innerHTML = "数値を入力してください"
-            }
+            // document.getElementById("enzansi").innerHTML = "+"
+
+            // if(!isNaN(total)){
+            //     document.getElementById("outPut").innerHTML = `計算結果は${total}です`
+            // }else{
+            //     document.getElementById("outPut").innerHTML = "数値を入力してください"
+            // }
            
         }else if(checkValue == "hiku"){
             let total = parseInt(number1.value) - parseInt(number2.value)
